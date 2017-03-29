@@ -1,0 +1,44 @@
+<template>
+  <table>
+    <thead>
+      <tr>
+        <th><input type="checkbox" model.bind="selectAll"></th>
+        <th>Login</th>
+        <th>Name</th>
+        <th>PDM</th>
+        <th>EM</th>
+        <th>Tower</th>
+        <th>Admission</th>
+        <th>Available</th>
+        <th>Allocated</th>
+        <th>Overhead</th>
+        <th>To be Allocated</th>
+        <th>Alloc Apr</th>
+        <th>Alloc May</th>
+        <th>Alloc Jun</th>
+        <th>Report</th>
+        <th>EM</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr repeat.for="d of data">
+        <td><input type="checkbox" model.bind="option" checked.bind="$parent.selectedOptions"></td>
+        <td>${d.login}</td>
+        <td>${d.name}</td>
+        <td>${d.loginPdm}</td>
+        <td>${d.loginGe}</td>
+        <td>${d.towerName}</td>
+        <td>${d.admittedAt}</td>
+        <td>${d.availablePercentage}</td>
+        <td>${d.allocatedPercentage}</td>
+        <td>${d.overheadPercentage}</td>
+        <td>${d.toBeAllocatedPercentage}</td>
+        <td>${d.monthOneAllocationPercentage}</td>
+        <td>${d.monthTwoAllocationPercentage}</td>
+        <td>${d.monthThreeAllocationPercentage}</td>
+        <td>${d.monthFourAllocationPercentage}</td>
+        <td>${d.geNotified}</td>
+      </tr>
+    </tbody>
+  </table>
+</template>
